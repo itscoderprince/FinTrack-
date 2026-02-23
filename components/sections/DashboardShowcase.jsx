@@ -8,7 +8,7 @@ export default function DashboardShowcase() {
 
             <div className="container mx-auto px-6 lg:px-8 max-w-[1200px] flex flex-col items-center">
 
-                <div className="text-center mb-16 relative z-10">
+                <div className="text-center max-w-2xl mb-16 relative z-10">
                     <Badge variant="outline" className="text-blue-600 bg-blue-50 border-blue-200 mb-6 hover:bg-blue-100 px-3 py-1">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 inline-block"></span>
                         Key Features
