@@ -8,15 +8,15 @@ export default function DashboardShowcase() {
 
             <div className="container mx-auto px-6 lg:px-8 max-w-[1200px] flex flex-col items-center">
 
-                <div className="text-center max-w-2xl mb-16 relative z-10">
+                <div className="text-center max-w-4xl mb-16 relative z-10">
                     <Badge variant="outline" className="text-blue-600 bg-blue-50 border-blue-200 mb-6 hover:bg-blue-100 px-3 py-1">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 inline-block"></span>
-                        Key FeaturesC
+                        Key Features
                     </Badge>
-                    <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-gray-900 mb-6">
+                    <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-gray-900 mb-6 whitespace-nowrap">
                         Modern Tools for Modern Finance
                     </h2>
-                    <p className="text-gray-500 mb-8">
+                    <p className="text-gray-500 mb-8 max-w-2xl mx-auto">
                         Manage all your finances in one secure place with real-time insights and smart tools.
                     </p>
 

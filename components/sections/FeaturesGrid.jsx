@@ -30,7 +30,7 @@ export default function FeaturesGrid() {
                 </div>
 
                 {/* CSS Grid for the highly complex layout */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
 
                     {/* Card 1: Small Savings */}
                     <Card className="lg:col-span-4 xl:col-span-5 bg-[#fdfdfd] border-0 rounded-[24px] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col p-10 justify-center min-h-[400px]">
@@ -148,7 +148,7 @@ export default function FeaturesGrid() {
                                 {/* Character Image */}
                                 <div className="absolute bottom-0 -right-8 w-[280px] h-[360px] md:w-[320px] md:h-full z-10 flex justify-end items-end">
                                     <img
-                                        src="https://images.unsplash.com/photo-1549471013-3364d7220b75?auto=format&fit=crop&q=80&w=500"
+                                        src="/images/meet_the_minds.png"
                                         alt="Meet the minds behind FinTrack"
                                         className="w-full h-full object-cover object-bottom mix-blend-multiply opacity-100"
                                     />
@@ -246,8 +246,6 @@ export default function FeaturesGrid() {
                             </p>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </section>
