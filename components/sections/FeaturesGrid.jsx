@@ -41,17 +41,18 @@ export default function FeaturesGrid() {
                 {/* CSS Grid for the highly complex layout */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-4">
 
-                    {/* Card 1: Small Savings */}
+                    {/* Top Row: Introduction & Browser Split */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "-100px" }}
                         transition={{ duration: 0.6, delay: 0.1 }}
-                        className="lg:col-span-4 xl:col-span-5 flex h-full"
+                        className="lg:col-span-12 flex h-full min-h-[460px]"
                     >
-                        <Card className="w-full bg-[#fdfdfd] border-0 rounded-[24px] shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] overflow-hidden flex flex-col p-8 md:p-10 justify-center min-h-[400px]">
-                            <div>
-                                <h3 className="text-[32px] md:text-[36px] font-medium leading-[1.1] tracking-tight mb-5 text-[#111827]">
+                        <div className="w-full bg-[#f4f7fe] border border-gray-100 overflow-hidden flex flex-col lg:flex-row p-2 md:p-3 rounded-[32px] gap-2 lg:gap-6 items-stretch">
+                            {/* Left Side text */}
+                            <div className="w-full lg:w-[35%] xl:w-[32%] flex flex-col justify-center px-6 lg:pl-10 xl:pl-12 py-12 lg:py-0 shrink-0">
+                                <h3 className="text-[32px] md:text-[36px] lg:text-[40px] font-medium leading-[1.05] tracking-tight mb-5 text-[#111827]">
                                     Small savings today.<br />
                                     Stronger finances<br />
                                     tomorrow.
@@ -59,122 +60,113 @@ export default function FeaturesGrid() {
                                 <p className="text-gray-500 text-[15px] mb-8 leading-[1.6] max-w-[280px]">
                                     FinTrack helps you build long-term wealth through simple, consistent daily savings.
                                 </p>
-                                <Button className="bg-[#111827] text-white hover:bg-gray-800 rounded-full px-7 py-6 text-[15px] font-medium w-fit">
+                                <Button className="bg-[#111827] text-white hover:bg-gray-800 rounded-full px-7 py-6 text-[15px] font-medium w-fit shadow-md">
                                     Start Free trial
                                 </Button>
                             </div>
-                        </Card>
-                    </motion.div>
 
-                    {/* Card 2: Meet the minds */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "-100px" }}
-                        transition={{ duration: 0.6, delay: 0.2 }}
-                        className="lg:col-span-7 flex h-full"
-                    >
-                        <Card className="w-full bg-[#ffffff] border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col p-0 relative min-h-[420px] rounded-[24px]">
-                            {/* Browser Header */}
-                            <div className="flex items-start justify-between px-6 pt-5 pb-4 border-b border-transparent">
-                                <div className="flex flex-col gap-2.5">
-                                    <BrowserDots />
-                                    <span className="text-[14px] font-bold text-[#2a4365] tracking-tight">
-                                        Products Team - Redesign Decussion <span className="font-normal text-gray-400 tracking-normal ml-0.5">• 26 Dec 2026</span>
-                                    </span>
-                                </div>
-                                <div className="flex gap-2">
-                                    <div className="w-8 h-8 rounded-full bg-[#0d1f42] flex items-center justify-center text-white shadow-sm cursor-pointer hover:bg-gray-800 transition-colors">
-                                        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                            {/* Right Side Browser mock */}
+                            <div className="w-full lg:flex-1 bg-[#ffffff] border border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.03)] rounded-[24px] overflow-hidden flex flex-col p-0 relative">
+                                {/* Browser Header */}
+                                <div className="flex items-center w-full px-6 pt-4 pb-4 border-b border-transparent">
+                                    <div className="flex items-center gap-4 flex-1">
+                                        <BrowserDots />
+                                        <span className="text-[14px] md:text-[15px] font-bold text-[#111827] tracking-tight whitespace-nowrap overflow-hidden text-ellipsis flex-1">
+                                            Products Team - Redesign Decussion <span className="font-normal text-gray-500 tracking-normal ml-0.5 whitespace-nowrap">• 26 Dec 2026 - 2:00PM</span>
+                                        </span>
                                     </div>
-                                    <div className="w-8 h-8 rounded-full bg-[#0d1f42] flex items-center justify-center text-white shadow-sm cursor-pointer hover:bg-gray-800 transition-colors hidden sm:flex">
-                                        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                    <div className="flex gap-2 ml-4">
+                                        <div className="w-8 h-8 rounded-full bg-[#0d1f42] flex items-center justify-center text-white shadow-sm cursor-pointer hover:bg-gray-800 transition-colors">
+                                            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                                        </div>
+                                        <div className="w-8 h-8 rounded-full bg-[#0d1f42] flex items-center justify-center text-white shadow-sm cursor-pointer hover:bg-gray-800 transition-colors hidden sm:flex">
+                                            <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            {/* Browser Content Layout - Responsive Flex-Col on Mobile */}
-                            <div className="flex flex-col md:flex-row gap-4 px-6 pb-6 flex-1 relative">
-                                {/* Left Column (Chat + Analytics) */}
-                                <div className="flex flex-col w-full md:w-[45%] gap-4 h-full">
-                                    {/* Chat Skeleton */}
-                                    <div className="bg-[#e9f3fe] rounded-[24px] p-5 h-auto md:h-[155px] flex items-center justify-center shadow-sm">
-                                        <div className="bg-white rounded-[16px] shadow-[0_2px_15px_rgba(0,0,0,0.03)] w-full h-[100px] p-4 flex flex-col relative">
-                                            <div className="flex gap-1.5 mb-5 opacity-40">
-                                                <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
-                                                <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
-                                                <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
-                                            </div>
-                                            <div className="flex justify-between w-[95%] mx-auto mb-3">
-                                                <div className="h-[7px] w-[42%] bg-[#2a68e8] rounded-full"></div>
-                                                <div className="h-[7px] w-[42%] bg-[#2a68e8] rounded-full relative">
-                                                    <div className="absolute -bottom-[26px] right-0 bg-[#3276f3] text-white text-[9px] font-bold px-3 py-1 rounded-full shadow-md z-10 hidden sm:flex cursor-default">
-                                                        Sajibur
-                                                        <div className="absolute -top-[5px] left-1 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-b-[6px] border-b-[#3276f3] rotate-[-25deg]"></div>
+                                {/* Browser Content Layout - Responsive Flex-Col on Mobile */}
+                                <div className="flex flex-col md:flex-row gap-4 px-6 pb-6 flex-1 relative">
+                                    {/* Left Column (Chat + Analytics) */}
+                                    <div className="flex flex-col w-full md:w-[45%] lg:w-[42%] gap-4 h-full">
+                                        {/* Chat Skeleton */}
+                                        <div className="bg-[#e9f3fe] rounded-[24px] p-5 h-auto md:h-[155px] flex items-center justify-center shadow-sm">
+                                            <div className="bg-white rounded-[16px] shadow-[0_2px_15px_rgba(0,0,0,0.03)] w-full h-[100px] p-4 flex flex-col relative">
+                                                <div className="flex gap-1.5 mb-5 opacity-40">
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
+                                                    <div className="w-1.5 h-1.5 rounded-full bg-gray-400"></div>
+                                                </div>
+                                                <div className="flex justify-between w-[95%] mx-auto mb-3">
+                                                    <div className="h-[7px] w-[42%] bg-[#2a68e8] rounded-full"></div>
+                                                    <div className="h-[7px] w-[42%] bg-[#2a68e8] rounded-full relative">
+                                                        <div className="absolute -bottom-[26px] right-0 bg-[#3276f3] text-white text-[9px] font-bold px-3 py-1 rounded-full shadow-md z-10 hidden sm:flex cursor-default">
+                                                            Sajibur
+                                                            <div className="absolute -top-[5px] left-1 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-b-[6px] border-b-[#3276f3] rotate-[-25deg]"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div>
-                                                <div className="h-[7px] w-[55%] bg-[#2a68e8] rounded-full relative ml-[2.5%] mt-1">
-                                                    <div className="absolute -bottom-[26px] left-[-0.5rem] bg-[#00897b] text-white text-[9px] font-bold px-3 py-1 rounded-full shadow-md z-10 hidden sm:flex cursor-default">
-                                                        Kabir
-                                                        <div className="absolute -top-[5px] right-1 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-b-[6px] border-b-[#00897b] rotate-[25deg]"></div>
+                                                <div>
+                                                    <div className="h-[7px] w-[55%] bg-[#2a68e8] rounded-full relative ml-[2.5%] mt-1">
+                                                        <div className="absolute -bottom-[26px] left-[-0.5rem] bg-[#00897b] text-white text-[9px] font-bold px-3 py-1 rounded-full shadow-md z-10 hidden sm:flex cursor-default">
+                                                            Kabir
+                                                            <div className="absolute -top-[5px] right-1 w-0 h-0 border-l-[5px] border-l-transparent border-r-[5px] border-r-transparent border-b-[6px] border-b-[#00897b] rotate-[25deg]"></div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
 
-                                    {/* Analytics Area */}
-                                    <div className="bg-[#ffffff] rounded-[24px] p-5 flex-1 flex flex-col min-h-[190px] md:min-h-0 shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-gray-100">
-                                        <div className="flex justify-between items-center mb-0">
-                                            <span className="text-[15px] font-bold text-gray-900 tracking-tight">Analytics</span>
-                                            <div className="text-[13px] text-gray-500 flex items-center gap-1 cursor-pointer font-medium">All time <ChevronDown className="w-3.5 h-3.5 text-gray-400" /></div>
-                                        </div>
-                                        <div className="flex flex-col flex-1 items-center justify-center relative pb-2 overflow-visible w-full mt-4">
-                                            <div className="relative w-full max-w-[200px] mx-auto overflow-hidden flex justify-center items-end">
-                                                <svg viewBox="0 0 100 50" className="w-[120%] h-[120%] overflow-visible">
-                                                    <path d="M 12 45 A 38 38 0 0 1 88 45" fill="none" stroke="#d4e4fd" strokeWidth="22" strokeLinecap="butt" />
-                                                    <path d="M 12 45 A 38 38 0 0 1 65 12" fill="none" stroke="#2563eb" strokeWidth="22" strokeLinecap="butt" />
-                                                </svg>
-                                                <div className="absolute inset-0 flex flex-col items-center justify-end pb-0">
-                                                    <span className="text-[36px] font-bold text-gray-900 leading-[0.8] tracking-tight">74%</span>
-                                                </div>
+                                        {/* Analytics Area */}
+                                        <div className="bg-[#ffffff] rounded-[24px] p-3 flex-1 flex flex-col min-h-[190px] md:min-h-0 shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-gray-100">
+                                            <div className="flex justify-between items-center mb-0">
+                                                <span className="text-[15px] font-bold text-gray-900 tracking-tight">Analytics</span>
+                                                <div className="text-[13px] text-gray-500 flex items-center gap-1 cursor-pointer font-medium">All time <ChevronDown className="w-3.5 h-3.5 text-gray-400" /></div>
                                             </div>
-                                            <span className="text-[13px] text-gray-500 mt-6 font-medium tracking-tight h-5">Actually Records</span>
+                                            <div className="flex flex-col flex-1 items-center justify-center relative pb-4 w-full mt-2">
+                                                <div className="relative w-[85%] mx-auto overflow-hidden flex justify-center items-end">
+                                                    <svg viewBox="0 0 100 55" className="w-full">
+                                                        <path d="M 15 45 A 35 35 0 0 1 85 45" fill="none" stroke="#d4e4fd" strokeWidth="20" />
+                                                        <path d="M 15 45 A 35 35 0 0 1 68 15" fill="none" stroke="#2563eb" strokeWidth="20" />
+                                                    </svg>
+                                                    <div className="absolute inset-0 flex flex-col items-center justify-end pb-3">
+                                                        <span className="text-[28px] md:text-[32px] font-bold text-gray-900 leading-none tracking-tight">74%</span>
+                                                    </div>
+                                                </div>
+                                                <span className="text-[14px] text-gray-500 mt-3 font-medium tracking-tight h-5">Actually Records</span>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
-                                {/* Right Column (Meet the minds container) - Adjust min-height for mobile */}
-                                <div className="w-full md:flex-1 rounded-[24px] overflow-hidden relative flex flex-col md:block mt-4 md:mt-0 pt-24 md:pt-0 border border-blue-50/20" style={{ backgroundColor: "#8cbed0" }}>
-                                    {/* Logo area */}
-                                    <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/50 backdrop-blur-md px-2.5 py-1.5 rounded-full shadow-sm z-20 w-fit">
-                                        <div className="w-5 h-5 rounded-full bg-[#416aff] flex items-center justify-center shrink-0">
-                                            <svg viewBox="0 0 24 24" fill="none" className="w-[11px] h-[11px] text-white" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                                    {/* Right Column (Meet the minds container) - Adjust min-height for mobile */}
+                                    <div className="w-full md:flex-1 rounded-[24px] overflow-hidden relative flex flex-col pt-[300px] md:pt-0 border border-blue-50/20 bg-[#d4f0ff]">
+                                        {/* Background Image Container */}
+                                        <div className="absolute top-0 right-0 bottom-0 w-[80%] md:w-[75%] h-full z-10 flex justify-end">
+                                            <img
+                                                src="/images/meet_the_minds.png"
+                                                alt="Meet the minds behind FinTrack"
+                                                className="w-full h-full object-cover mix-blend-normal object-left-bottom"
+                                            />
                                         </div>
-                                        <span className="text-[14px] font-bold text-gray-900 tracking-tight pr-1">FinTrack</span>
-                                    </div>
 
-                                    {/* Text blocks matching image layout */}
-                                    <div className="relative md:absolute md:top-[120px] px-6 md:left-6 md:px-0 z-20 flex flex-col mb-4 md:mb-0 w-[50%] md:w-auto">
-                                        <span className="font-extrabold text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] text-[#0f172a] leading-[1.05] tracking-tight whitespace-nowrap">MEET THE</span>
-                                        <span className="font-extrabold text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] text-[#0f172a] leading-[1.05] tracking-tight whitespace-nowrap">MINDS BEHIND</span>
-                                        <span className="font-extrabold text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] text-[#0f172a] leading-[1.05] tracking-tight whitespace-nowrap">FINTRACK</span>
-                                    </div>
+                                        {/* Logo area */}
+                                        <div className="absolute top-6 left-6 flex items-center gap-2 z-20 w-fit">
+                                            <div className="w-8 h-8 rounded-[8px] bg-[#416aff] flex items-center justify-center shrink-0 shadow-sm">
+                                                <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-white" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                                            </div>
+                                            <span className="text-[16px] font-[800] text-[#0f172a] tracking-tight">FinTrack</span>
+                                        </div>
 
-                                    {/* Character Image */}
-                                    <div className="relative md:absolute md:bottom-0 md:-right-0 w-full md:w-[80%] h-[300px] sm:h-[360px] md:h-full z-10 flex justify-end md:items-end mt-auto">
-                                        <img
-                                            src="/images/meet_the_minds.png"
-                                            alt="Meet the minds behind FinTrack"
-                                            className="w-full h-full object-cover sm:object-contain md:object-cover mix-blend-normal opacity-100"
-                                            style={{ objectPosition: "bottom right" }}
-                                        />
+                                        {/* Text blocks matching image layout */}
+                                        <div className="absolute top-[90px] left-6 z-20 flex flex-col pointer-events-none">
+                                            <span className="font-[900] text-[28px] sm:text-[32px] lg:text-[30px] xl:text-[36px] text-[#0f172a] leading-[1.1] tracking-tight whitespace-nowrap">MEET THE</span>
+                                            <span className="font-[900] text-[28px] sm:text-[32px] lg:text-[30px] xl:text-[36px] text-[#0f172a] leading-[1.1] tracking-tight whitespace-nowrap">MINDS BEHIND</span>
+                                            <span className="font-[900] text-[28px] sm:text-[32px] lg:text-[30px] xl:text-[36px] text-[#0f172a] leading-[1.1] tracking-tight whitespace-nowrap">FINTRACK</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </Card>
+                        </div>
                     </motion.div>
 
                     {/* Card 3: Earning Overview Container */}
