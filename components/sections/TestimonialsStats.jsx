@@ -12,66 +12,62 @@ export default function TestimonialsStats() {
                 {/* Trusted By Millions (Stats) Section */}
                 <div className="flex flex-col lg:flex-row gap-16 items-center mb-32">
 
-                    <div className="flex-1 w-full max-w-xl">
-                        <h2 className="text-3xl md:text-5xl font-semibold tracking-tight text-gray-900 mb-6 leading-tight">
-                            Trusted by Millions, Backed by Real Results
+                    {/* Left Column: Content & Stats */}
+                    <div className="flex-1 w-full flex flex-col items-start pr-0 lg:pr-8">
+                        <h2 className="text-[36px] md:text-[44px] font-semibold tracking-tight text-gray-900 mb-4 leading-[1.15] w-full">
+                            Trusted by Millions,<br />Backed by Real Results
                         </h2>
-                        <p className="text-gray-500 mb-8 text-lg">
+                        <p className="text-gray-500 mb-10 text-[15px] leading-[1.6] max-w-[480px]">
                             Built on proven performance and measurable outcomes, delivering reliability, security, and confidence at scale.
                         </p>
-                        <Button className="bg-[#00102a] text-white hover:bg-[#001840] rounded-full px-8 py-6 mb-12">
+
+                        <Button className="bg-[#0f172a] text-white hover:bg-[#1e293b] rounded-full px-7 py-5 text-[14px] font-medium mb-16 shadow-lg shadow-slate-200">
                             Get Started
                         </Button>
 
-                        {/* Stats */}
-                        <div className="space-y-6">
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                        {/* Stats Container styled like the reference */}
+                        <div className="bg-[#f8fafc] w-full rounded-[24px] p-8 border border-gray-50 shadow-sm">
+                            <div className="space-y-8">
+                                <div className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-[#e0efff] flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
+                                        <svg className="w-5 h-5 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-[22px] font-bold text-gray-900 mb-0.5">$120B+</h4>
+                                        <p className="text-[13px] text-gray-500 leading-snug">Transactions processed securely every year</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h4 className="text-2xl font-bold text-gray-900">$120B+</h4>
-                                    <p className="text-sm text-gray-500">Transactions processed securely every year</p>
+                                <div className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-[#e0eaff] flex items-center justify-center text-sky-600 shrink-0 shadow-sm">
+                                        <svg className="w-5 h-5 text-[#3b82f6]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-[22px] font-bold text-gray-900 mb-0.5">35%</h4>
+                                        <p className="text-[13px] text-gray-500 leading-snug">Average savings increase for active users</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
-                                </div>
-                                <div>
-                                    <h4 className="text-2xl font-bold text-gray-900">35%</h4>
-                                    <p className="text-sm text-gray-500">Average savings increase for active users</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start gap-4">
-                                <div className="w-10 h-10 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 shrink-0">
-                                    <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
-                                </div>
-                                <div>
-                                    <h4 className="text-2xl font-bold text-gray-900">10M+</h4>
-                                    <p className="text-sm text-gray-500">Users managing daily finances with FinTrack</p>
+                                <div className="flex items-start gap-4">
+                                    <div className="w-10 h-10 rounded-full bg-[#e0efff] flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
+                                        <svg className="w-5 h-5 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                                    </div>
+                                    <div>
+                                        <h4 className="text-[22px] font-bold text-gray-900 mb-0.5">10M+</h4>
+                                        <p className="text-[13px] text-gray-500 leading-snug">Users managing daily finances with FinTrack</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div className="flex-1 w-full relative">
-                        <div className="aspect-square max-h-[500px] w-full bg-gray-200 rounded-3xl overflow-hidden relative shadow-2xl">
-                            {/* Fallback image */}
-                            <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=1000')] bg-cover bg-center"></div>
+                    {/* Right Column: Realistic Image */}
+                    <div className="flex-[0.9] w-full relative">
+                        <div className="aspect-[4/5] md:aspect-[5/6] w-full rounded-[32px] overflow-hidden relative shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]">
+                            <img
+                                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800"
+                                alt="Professionals reviewing results"
+                                className="w-full h-full object-cover object-center"
+                            />
                         </div>
-                        {/* Overlay card */}
-                        <Card className="absolute -bottom-8 -left-8 bg-white p-4 shadow-xl border-0 animate-bounce" style={{ animationDuration: '4s' }}>
-                            <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center text-green-600">
-                                    <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
-                                </div>
-                                <div>
-                                    <p className="text-sm font-semibold text-gray-900">Data Synchronized</p>
-                                    <p className="text-xs text-gray-500">Updated just now</p>
-                                </div>
-                            </div>
-                        </Card>
                     </div>
                 </div>
 
