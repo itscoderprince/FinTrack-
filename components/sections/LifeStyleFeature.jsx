@@ -7,10 +7,21 @@ export default function LifeStyleFeature() {
             <div className="container mx-auto px-6 lg:px-8 max-w-[1200px]">
                 <div className="flex flex-col lg:flex-row items-center gap-16">
 
-                    {/* Left Column: Content */}
-                    <div className="flex-1 w-full flex flex-col items-start pr-0 lg:pr-8">
+                    {/* Left Column: Realistic Image */}
+                    <div className="w-full lg:w-[45%] relative flex justify-center lg:justify-start">
+                        <div className="aspect-[4/5] md:aspect-[5/6] w-full max-w-[480px] rounded-[32px] overflow-hidden relative shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]">
+                            <img
+                                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800"
+                                alt="Man using phone for everyday finance"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Right Column: Content */}
+                    <div className="w-full lg:w-[55%] flex flex-col items-start pl-0 lg:pl-12">
                         <h2 className="text-[36px] md:text-[44px] font-semibold tracking-tight text-gray-900 mb-6 leading-[1.15] w-full">
-                            Smarted Finance, Built<br />for Everyday Life
+                            Smarted Finance, Built<br className="hidden md:block" /> for Everyday Life
                         </h2>
                         <p className="text-gray-500 mb-8 text-[15px] leading-[1.6] max-w-[480px]">
                             Take full control of your finances with real-time insights, smart automation, and secure tools designed to help you spend wisely.
@@ -20,7 +31,7 @@ export default function LifeStyleFeature() {
                             Get Started
                         </Button>
 
-                        <div className="w-full flex gap-4">
+                        <div className="w-full flex flex-col md:flex-row gap-4">
                             <Card className="flex-1 p-6 bg-[#f8fafc] border border-gray-100 shadow-sm rounded-[24px]">
                                 <div className="w-10 h-10 bg-[#e0efff] text-blue-600 rounded-full flex items-center justify-center mb-4 shadow-sm">
                                     <svg className="w-5 h-5 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -40,17 +51,6 @@ export default function LifeStyleFeature() {
                                 <h4 className="text-[15px] font-bold text-gray-900 mb-1">Smart Budgeting</h4>
                                 <p className="text-[13px] text-gray-500 leading-snug">Take full control of your finances with real-time insights.</p>
                             </Card>
-                        </div>
-                    </div>
-
-                    {/* Right Column: Realistic Image */}
-                    <div className="flex-[0.9] w-full relative">
-                        <div className="aspect-[4/5] md:aspect-[5/6] w-full rounded-[32px] overflow-hidden relative shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]">
-                            <img
-                                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800"
-                                alt="Man using phone for everyday finance"
-                                className="w-full h-full object-cover"
-                            />
                         </div>
                     </div>
 

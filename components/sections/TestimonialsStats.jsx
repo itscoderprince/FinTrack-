@@ -13,9 +13,9 @@ export default function TestimonialsStats() {
                 <div className="flex flex-col lg:flex-row gap-16 items-center mb-32">
 
                     {/* Left Column: Content & Stats */}
-                    <div className="flex-1 w-full flex flex-col items-start pr-0 lg:pr-8">
+                    <div className="w-full lg:w-[55%] flex flex-col items-start pr-0 lg:pr-12">
                         <h2 className="text-[36px] md:text-[44px] font-semibold tracking-tight text-gray-900 mb-4 leading-[1.15] w-full">
-                            Trusted by Millions,<br />Backed by Real Results
+                            Trusted by Millions,<br className="hidden md:block" /> Backed by Real Results
                         </h2>
                         <p className="text-gray-500 mb-10 text-[15px] leading-[1.6] max-w-[480px]">
                             Built on proven performance and measurable outcomes, delivering reliability, security, and confidence at scale.
@@ -60,8 +60,8 @@ export default function TestimonialsStats() {
                     </div>
 
                     {/* Right Column: Realistic Image */}
-                    <div className="flex-[0.9] w-full relative">
-                        <div className="aspect-[4/5] md:aspect-[5/6] w-full rounded-[32px] overflow-hidden relative shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]">
+                    <div className="w-full lg:w-[45%] relative flex justify-center lg:justify-end">
+                        <div className="aspect-[4/5] md:aspect-[5/6] w-full max-w-[480px] rounded-[32px] overflow-hidden relative shadow-[0_10px_40px_-10px_rgba(0,0,0,0.1)]">
                             <img
                                 src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800"
                                 alt="Professionals reviewing results"
