@@ -36,41 +36,41 @@ export default function TestimonialsStats() {
 
                         {/* Stats Container styled like the reference */}
                         <div className="bg-[#f8fafc] w-full rounded-[24px] p-6 sm:p-8 border border-gray-50 shadow-sm">
-                            <div className="space-y-6 sm:space-y-8">
+                            <div className="flex flex-col gap-5 sm:gap-6">
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}
-                                    className="flex items-start gap-3 sm:gap-4"
+                                    className="flex items-start gap-3 sm:gap-4 pb-5 border-b border-gray-200"
                                 >
                                     <div className="w-10 h-10 rounded-full bg-[#e0efff] flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
                                         <svg className="w-5 h-5 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" /></svg>
                                     </div>
                                     <div>
                                         <h4 className="text-[20px] sm:text-[22px] font-bold text-gray-900 mb-0.5">$120B+</h4>
-                                        <p className="text-[12px] sm:text-[13px] text-gray-500 leading-snug">Transactions processed securely every year</p>
+                                        <p className="text-[12px] sm:text-[13px] text-gray-500 leading-relaxed font-medium">Transactions processed securely every year</p>
                                     </div>
                                 </motion.div>
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.3 }}
-                                    className="flex items-start gap-3 sm:gap-4"
+                                    className="flex items-start gap-3 sm:gap-4 pb-5 border-b border-gray-200"
                                 >
                                     <div className="w-10 h-10 rounded-full bg-[#e0eaff] flex items-center justify-center text-sky-600 shrink-0 shadow-sm">
                                         <svg className="w-5 h-5 text-[#3b82f6]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>
                                     </div>
                                     <div>
                                         <h4 className="text-[20px] sm:text-[22px] font-bold text-gray-900 mb-0.5">35%</h4>
-                                        <p className="text-[12px] sm:text-[13px] text-gray-500 leading-snug">Average savings increase for active users</p>
+                                        <p className="text-[12px] sm:text-[13px] text-gray-500 leading-relaxed font-medium">Average savings increase for active users</p>
                                     </div>
                                 </motion.div>
                                 <motion.div
                                     initial={{ opacity: 0, y: 10 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-                                    className="flex items-start gap-3 sm:gap-4"
+                                    className="flex items-start gap-3 sm:gap-4 pb-1"
                                 >
                                     <div className="w-10 h-10 rounded-full bg-[#e0efff] flex items-center justify-center text-blue-600 shrink-0 shadow-sm">
                                         <svg className="w-5 h-5 text-[#2563eb]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
                                     </div>
                                     <div>
                                         <h4 className="text-[20px] sm:text-[22px] font-bold text-gray-900 mb-0.5">10M+</h4>
-                                        <p className="text-[12px] sm:text-[13px] text-gray-500 leading-snug">Users managing daily finances with FinTrack</p>
+                                        <p className="text-[12px] sm:text-[13px] text-gray-500 leading-relaxed font-medium">Users managing daily finances with FinTrack</p>
                                     </div>
                                 </motion.div>
                             </div>
@@ -101,7 +101,7 @@ export default function TestimonialsStats() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
-                    className="text-center max-w-2xl mx-auto mb-16"
+                    className="text-center mx-auto mb-16"
                 >
                     <Badge variant="outline" className="text-blue-600 bg-blue-50 border-blue-200 mb-6 hover:bg-blue-100 px-3 py-1">
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-500 mr-2 inline-block"></span>

@@ -1,10 +1,25 @@
 "use client";
 
+import { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight, Star, ChevronDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { motion } from "framer-motion";
+import { motion, useMotionValue, useTransform, animate } from "framer-motion";
+
+function AnimatedCounter({ from, to }) {
+    const count = useMotionValue(from);
+    const rounded = useTransform(count, (latest) => {
+        return "$" + latest.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    });
+
+    useEffect(() => {
+        const controls = animate(count, to, { duration: 2, ease: "easeOut", delay: 1.0 });
+        return controls.stop;
+    }, [count, to]);
+
+    return <motion.span>{rounded}</motion.span>;
+}
 
 export default function HeroSection() {
     return (
@@ -108,7 +123,9 @@ export default function HeroSection() {
 
                                 <div className="bg-white rounded-[20px] p-6 shadow-xl relative overflow-hidden text-center z-10 bottom-card">
                                     <span className="text-[12px] text-gray-500 font-medium">Total Expenses</span>
-                                    <div className="text-[40px] font-bold text-gray-900 mt-1 mb-6 tracking-tight">$24,383.89</div>
+                                    <div className="text-[40px] font-bold text-gray-900 mt-1 mb-6 tracking-tight">
+                                        <AnimatedCounter from={0} to={24383.89} />
+                                    </div>
 
                                     {/* Progress section inline */}
                                     <div className="flex justify-between w-full mx-auto px-4 mb-3">

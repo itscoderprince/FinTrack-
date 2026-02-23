@@ -34,12 +34,12 @@ export default function DashboardShowcase() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="flex flex-wrap justify-center gap-2"
+                        className="flex justify-center gap-1 border border-gray-100 p-1.5 rounded-full shadow-sm bg-white/60 mx-auto w-fit"
                     >
-                        <Badge className="bg-[#00102a] text-white hover:bg-[#001840] px-4 py-2 rounded-full font-medium">Dashboard</Badge>
+                        <Badge className="bg-[#00102a] text-white hover:bg-[#001840] px-4 py-2 rounded-full font-medium shadow-md">Dashboard</Badge>
                         <Badge variant="outline" className="text-gray-500 hover:text-gray-900 border-transparent hover:bg-gray-50 px-4 py-2 rounded-full font-medium">Wallets</Badge>
-                        <Badge variant="outline" className="text-gray-500 hover:text-gray-900 border-transparent hover:bg-gray-50 px-4 py-2 rounded-full font-medium">Analytics</Badge>
-                        <Badge variant="outline" className="text-gray-500 hover:text-gray-900 border-transparent hover:bg-gray-50 px-4 py-2 rounded-full font-medium">Invoices</Badge>
+                        <Badge variant="outline" className="text-gray-500 hover:text-gray-900 border-transparent hover:bg-gray-50 px-4 py-2 rounded-full font-medium hidden sm:inline-flex">Analytics</Badge>
+                        <Badge variant="outline" className="text-gray-500 hover:text-gray-900 border-transparent hover:bg-gray-50 px-4 py-2 rounded-full font-medium hidden sm:inline-flex">Invoices</Badge>
                         <Badge variant="outline" className="text-gray-500 hover:text-gray-900 border-transparent hover:bg-gray-50 px-4 py-2 rounded-full font-medium">Transactions</Badge>
                     </motion.div>
                 </motion.div>

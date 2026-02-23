@@ -76,18 +76,18 @@ export default function FeaturesGrid() {
                     >
                         <Card className="w-full bg-[#ffffff] border-gray-100 shadow-[0_4px_24px_rgba(0,0,0,0.04)] overflow-hidden flex flex-col p-0 relative min-h-[420px] rounded-[24px]">
                             {/* Browser Header */}
-                            <div className="flex items-center justify-between px-6 pt-5 pb-4 border-b border-transparent">
-                                <div className="flex items-center gap-4">
+                            <div className="flex items-start justify-between px-6 pt-5 pb-4 border-b border-transparent">
+                                <div className="flex flex-col gap-2.5">
                                     <BrowserDots />
-                                    <span className="text-[13px] font-bold text-gray-900 tracking-tight ml-1 hidden sm:block">
+                                    <span className="text-[14px] font-bold text-[#2a4365] tracking-tight">
                                         Products Team - Redesign Decussion <span className="font-normal text-gray-400 tracking-normal ml-0.5">• 26 Dec 2026</span>
                                     </span>
                                 </div>
                                 <div className="flex gap-2">
-                                    <div className="w-8 h-8 rounded-full bg-[#0d1f42] flex items-center justify-center text-white shadow-sm cursor-pointer">
-                                        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></svg>
+                                    <div className="w-8 h-8 rounded-full bg-[#0d1f42] flex items-center justify-center text-white shadow-sm cursor-pointer hover:bg-gray-800 transition-colors">
+                                        <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
                                     </div>
-                                    <div className="w-8 h-8 rounded-full bg-[#0d1f42] hidden sm:flex items-center justify-center text-white shadow-sm cursor-pointer ml-1">
+                                    <div className="w-8 h-8 rounded-full bg-[#0d1f42] flex items-center justify-center text-white shadow-sm cursor-pointer hover:bg-gray-800 transition-colors hidden sm:flex">
                                         <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
                                     </div>
                                 </div>
@@ -126,55 +126,50 @@ export default function FeaturesGrid() {
                                     </div>
 
                                     {/* Analytics Area */}
-                                    <div className="bg-[#fafbfc] rounded-[24px] p-5 flex-1 flex flex-col min-h-[160px] md:min-h-0 shadow-sm border border-gray-100/50">
+                                    <div className="bg-[#ffffff] rounded-[24px] p-5 flex-1 flex flex-col min-h-[190px] md:min-h-0 shadow-[0_4px_24px_rgba(0,0,0,0.03)] border border-gray-100">
                                         <div className="flex justify-between items-center mb-0">
-                                            <span className="text-[14px] font-semibold text-gray-800 tracking-tight">Analytics</span>
-                                            <div className="text-[12px] text-gray-500 flex items-center gap-1 cursor-pointer font-medium">All time <ChevronDown className="w-3 h-3 text-gray-400" /></div>
+                                            <span className="text-[15px] font-bold text-gray-900 tracking-tight">Analytics</span>
+                                            <div className="text-[13px] text-gray-500 flex items-center gap-1 cursor-pointer font-medium">All time <ChevronDown className="w-3.5 h-3.5 text-gray-400" /></div>
                                         </div>
-                                        <div className="flex flex-col flex-1 items-center justify-end relative pb-3 overflow-visible">
-                                            <div className="relative w-40 h-24 overflow-hidden flex justify-center items-end">
+                                        <div className="flex flex-col flex-1 items-center justify-center relative pb-2 overflow-visible w-full mt-4">
+                                            <div className="relative w-full max-w-[200px] mx-auto overflow-hidden flex justify-center items-end">
                                                 <svg viewBox="0 0 100 50" className="w-[120%] h-[120%] overflow-visible">
-                                                    <path d="M 10 40 A 40 40 0 0 1 90 40" fill="none" stroke="#cfdffd" strokeWidth="15" strokeLinecap="butt" />
-                                                    <path d="M 10 40 A 40 40 0 0 1 70 15.3" fill="none" stroke="url(#blue-grad)" strokeWidth="15" strokeLinecap="butt" />
-                                                    <defs>
-                                                        <linearGradient id="blue-grad" x1="0" y1="0" x2="1" y2="0">
-                                                            <stop offset="0%" stopColor="#419aff" />
-                                                            <stop offset="100%" stopColor="#2040ff" />
-                                                        </linearGradient>
-                                                    </defs>
+                                                    <path d="M 12 45 A 38 38 0 0 1 88 45" fill="none" stroke="#d4e4fd" strokeWidth="22" strokeLinecap="butt" />
+                                                    <path d="M 12 45 A 38 38 0 0 1 65 12" fill="none" stroke="#2563eb" strokeWidth="22" strokeLinecap="butt" />
                                                 </svg>
-                                                <div className="absolute inset-0 flex flex-col items-center justify-end pb-1.5">
-                                                    <span className="text-[28px] font-bold text-gray-900 leading-[0.8] tracking-tight">74%</span>
+                                                <div className="absolute inset-0 flex flex-col items-center justify-end pb-0">
+                                                    <span className="text-[36px] font-bold text-gray-900 leading-[0.8] tracking-tight">74%</span>
                                                 </div>
                                             </div>
-                                            <span className="text-[11px] text-gray-600 mt-2 font-medium tracking-tight">Actually Records</span>
+                                            <span className="text-[13px] text-gray-500 mt-6 font-medium tracking-tight h-5">Actually Records</span>
                                         </div>
                                     </div>
                                 </div>
 
                                 {/* Right Column (Meet the minds container) - Adjust min-height for mobile */}
-                                <div className="w-full md:flex-1 bg-[#cbecfe] rounded-[24px] overflow-hidden relative border border-blue-50/20 flex flex-col md:block mt-4 md:mt-0 pt-24 md:pt-0">
+                                <div className="w-full md:flex-1 rounded-[24px] overflow-hidden relative flex flex-col md:block mt-4 md:mt-0 pt-24 md:pt-0 border border-blue-50/20" style={{ backgroundColor: "#8cbed0" }}>
                                     {/* Logo area */}
-                                    <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/50 backdrop-blur-md px-2.5 py-1 rounded-full shadow-sm z-20">
+                                    <div className="absolute top-6 left-6 flex items-center gap-2 bg-white/50 backdrop-blur-md px-2.5 py-1.5 rounded-full shadow-sm z-20 w-fit">
                                         <div className="w-5 h-5 rounded-full bg-[#416aff] flex items-center justify-center shrink-0">
                                             <svg viewBox="0 0 24 24" fill="none" className="w-[11px] h-[11px] text-white" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
                                         </div>
                                         <span className="text-[14px] font-bold text-gray-900 tracking-tight pr-1">FinTrack</span>
                                     </div>
 
-                                    {/* Text blocks */}
-                                    <div className="relative md:absolute md:top-28 px-6 md:left-6 md:px-0 z-20 w-[90%] md:w-[55%] flex flex-col mb-4 md:mb-0">
-                                        <span className="font-extrabold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-[#0f172a] leading-[1.1] tracking-[-0.04em]">MEET THE</span>
-                                        <span className="font-extrabold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-[#0f172a] leading-[1.1] tracking-[-0.04em]">MINDS BEHIND</span>
-                                        <span className="font-extrabold text-[24px] sm:text-[28px] md:text-[32px] lg:text-[36px] text-[#0f172a] leading-[1.1] tracking-[-0.04em]">FINTRACK</span>
+                                    {/* Text blocks matching image layout */}
+                                    <div className="relative md:absolute md:top-[120px] px-6 md:left-6 md:px-0 z-20 flex flex-col mb-4 md:mb-0 w-[50%] md:w-auto">
+                                        <span className="font-extrabold text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] text-[#0f172a] leading-[1.05] tracking-tight whitespace-nowrap">MEET THE</span>
+                                        <span className="font-extrabold text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] text-[#0f172a] leading-[1.05] tracking-tight whitespace-nowrap">MINDS BEHIND</span>
+                                        <span className="font-extrabold text-[32px] sm:text-[36px] md:text-[40px] lg:text-[44px] text-[#0f172a] leading-[1.05] tracking-tight whitespace-nowrap">FINTRACK</span>
                                     </div>
 
                                     {/* Character Image */}
-                                    <div className="relative md:absolute md:bottom-0 md:-right-4 sm:-right-8 w-full md:w-[320px] h-[300px] sm:h-[360px] md:h-full z-10 flex justify-end md:items-end mt-auto pr-4 md:pr-0">
+                                    <div className="relative md:absolute md:bottom-0 md:-right-0 w-full md:w-[80%] h-[300px] sm:h-[360px] md:h-full z-10 flex justify-end md:items-end mt-auto">
                                         <img
                                             src="/images/meet_the_minds.png"
                                             alt="Meet the minds behind FinTrack"
-                                            className="w-[240px] sm:w-[280px] md:w-full h-full object-cover object-bottom mix-blend-multiply opacity-100"
+                                            className="w-full h-full object-cover sm:object-contain md:object-cover mix-blend-normal opacity-100"
+                                            style={{ objectPosition: "bottom right" }}
                                         />
                                     </div>
                                 </div>
