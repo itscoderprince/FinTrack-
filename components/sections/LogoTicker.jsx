@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Star } from 'lucide-react';
 
 const logos = [
@@ -10,10 +13,16 @@ const logos = [
 
 export default function LogoTicker() {
     return (
-        <section className="py-16 bg-white border-b border-gray-100">
-            <div className="container mx-auto px-6 lg:px-8 max-w-[1200px] text-center">
-                <p className="text-[13.5px] font-medium text-gray-500 mb-8 tracking-wide">
-                    Empowering Team Worldwide - <span className="text-gray-800 font-bold">Over 20+ Million Users</span> Trust Taskko For Peak Productivity
+        <motion.section
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8 }}
+            className="py-16 bg-white border-b border-gray-100"
+        >
+            <div className="container mx-auto px-4 md:px-6 lg:px-8 max-w-[1200px] text-center">
+                <p className="text-[13.5px] font-medium text-gray-500 mb-8 tracking-wide max-w-[280px] sm:max-w-md md:max-w-full mx-auto leading-relaxed">
+                    Empowering Team Worldwide - <span className="text-gray-800 font-bold block sm:inline">Over 20+ Million Users</span> Trust Taskko For Peak Productivity
                 </p>
                 <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale hover:grayscale-0 transition-all duration-500">
                     {/* We'll just use styled text to resemble the logos perfectly since we don't have SVGs */}
@@ -44,6 +53,6 @@ export default function LogoTicker() {
 
                 </div>
             </div>
-        </section>
+        </motion.section>
     );
 }

@@ -1,7 +1,10 @@
+"use client";
+
 import { Button } from '@/components/ui/button';
 import { ArrowUpRight, Star, ChevronDown } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { motion } from "framer-motion";
 
 export default function HeroSection() {
     return (
@@ -9,42 +12,82 @@ export default function HeroSection() {
             {/* Background gradients representing the light blue flares */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 {/* Large sweeping cyan/blue intersection */}
-                <div className="absolute -top-[20%] -left-[10%] w-[70%] h-[80%] rounded-[100%] bg-[#3b82f6]/30 blur-[120px] mix-blend-screen" />
-                <div className="absolute top-[10%] left-[25%] w-[50%] h-[120%] rounded-[100%] bg-[#60a5fa]/20 blur-[130px] rotate-[-45deg] origin-center mix-blend-screen" />
-                <div className="absolute top-[30%] left-[40%] w-[30%] h-[80%] rounded-[100%] bg-[#93c5fd]/15 blur-[100px] rotate-[30deg] mix-blend-screen" />
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1.5 }}
+                    className="absolute -top-[20%] -left-[10%] w-[70%] h-[80%] rounded-[100%] bg-[#3b82f6]/30 blur-[120px] mix-blend-screen"
+                />
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1.5, delay: 0.2 }}
+                    className="absolute top-[10%] left-[25%] w-[50%] h-[120%] rounded-[100%] bg-[#60a5fa]/20 blur-[130px] rotate-[-45deg] origin-center mix-blend-screen"
+                />
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1.5, delay: 0.4 }}
+                    className="absolute top-[30%] left-[40%] w-[30%] h-[80%] rounded-[100%] bg-[#93c5fd]/15 blur-[100px] rotate-[30deg] mix-blend-screen"
+                />
                 {/* Dark overlay to deepen contrast */}
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#030712]/50 to-[#030712] pointer-events-none z-0" />
             </div>
 
-            <div className="container mx-auto px-6 lg:px-12 max-w-[1200px] relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 mt-2 mb-16 flex-1">
+            <div className="container mx-auto px-4 md:px-8 lg:px-12 max-w-[1200px] relative z-10 flex flex-col lg:flex-row items-center justify-between gap-10 mt-2 mb-16 flex-1">
 
                 {/* Left Content */}
                 <div className="flex-1 max-w-xl text-white">
-                    <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-white/5 px-3 py-1.5 text-xs text-blue-200 backdrop-blur-sm">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        className="mb-6 inline-flex items-center gap-2 rounded-full border border-blue-400/30 bg-white/5 px-3 py-1.5 text-xs text-blue-200 backdrop-blur-sm"
+                    >
                         <span className="w-1.5 h-1.5 rounded-full bg-blue-400"></span>
                         Perfect finance management AI Tool
-                    </div>
+                    </motion.div>
 
-                    <h1 className="text-5xl lg:text-6xl xl:text-[64px] font-bold tracking-tight mb-5 leading-[1.05] text-white">
-                        Take Control of <br />
-                        Your Money with <br />
+                    <motion.h1
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        className="text-4xl sm:text-5xl lg:text-6xl xl:text-[64px] font-bold tracking-tight mb-5 leading-[1.05] text-white"
+                    >
+                        Take Control of <br className="hidden lg:block" />
+                        Your Money with <br className="hidden lg:block" />
                         Smart Tools
-                    </h1>
+                    </motion.h1>
 
-                    <p className="text-base md:text-[17px] text-gray-300 mb-8 max-w-lg leading-relaxed font-light">
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.2 }}
+                        className="text-base md:text-[17px] text-gray-300 mb-8 max-w-lg leading-relaxed font-light"
+                    >
                         Track spending, plan budgets, and manage your money effortlessly with intelligent financial tools built for everyday use.
-                    </p>
+                    </motion.p>
 
-                    <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6, delay: 0.3 }}
+                        className="flex flex-col sm:flex-row items-center gap-4"
+                    >
                         <Button className="w-full sm:w-auto bg-white text-gray-900 hover:bg-gray-100 px-7 py-6 rounded-full font-medium text-[15px]">
                             Start Free trial
                         </Button>
-                    </div>
+                    </motion.div>
                 </div>
 
                 {/* Right Content - Expense Management Card Mockup */}
-                <div className="flex-1 w-full max-w-[500px] relative mt-10 lg:mt-0 perspective-[2000px]">
-                    <div className="relative transform rotate-y-[-10deg] rotate-x-[5deg] scale-100 xl:scale-105 z-20 transition-transform hover:scale-110 duration-700">
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9, rotateY: -15 }}
+                    animate={{ opacity: 1, scale: 1, rotateY: -10 }}
+                    transition={{ duration: 0.8, delay: 0.4, type: "spring", bounce: 0.4 }}
+                    className="flex-1 w-full max-w-[500px] relative mt-10 lg:mt-0 perspective-[2000px]"
+                >
+                    <div className="relative transform rotate-x-[5deg] scale-100 xl:scale-105 z-20 transition-transform hover:scale-110 duration-700">
                         {/* The main floating card exactly as inside the image */}
                         <div className="bg-[#1f4b8e]/90 backdrop-blur-xl rounded-[24px] shadow-[0_30px_60px_rgba(0,0,0,0.6)] border border-blue-400/20 overflow-hidden text-white flex flex-col pt-5">
 
@@ -105,11 +148,16 @@ export default function HeroSection() {
                         {/* Faint blue glow behind card */}
                         <div className="absolute -z-10 -right-10 -bottom-10 w-full h-full bg-blue-600/20 rounded-2xl blur-[80px]"></div>
                     </div>
-                </div>
+                </motion.div>
             </div>
 
             {/* Footer / Bottom strip of hero */}
-            <div className="container mx-auto px-6 lg:px-12 max-w-[1200px] relative z-20 mt-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/50 bg-[#030712]">
+            <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1, delay: 0.8 }}
+                className="container mx-auto px-6 lg:px-12 max-w-[1200px] relative z-20 mt-auto pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-white/50 bg-[#030712]"
+            >
                 <div className="flex items-center gap-3 text-[11px] font-medium tracking-widest uppercase cursor-pointer hover:text-white transition-colors">
                     SCROLL
                     <div className="w-[18px] h-[28px] border-2 border-white/40 rounded-full flex justify-center pt-1">
@@ -139,7 +187,7 @@ export default function HeroSection() {
                         <span className="text-[13px] font-medium text-white/80">10k+ Active users</span>
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 }

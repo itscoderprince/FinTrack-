@@ -21,7 +21,7 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-50 py-12 border-t border-gray-200 text-center">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-4 md:px-6">
           <div className="flex items-center justify-center gap-2 mb-4 text-[#00102a]">
             <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
             <span className="text-xl font-bold">FinTrack</span>
