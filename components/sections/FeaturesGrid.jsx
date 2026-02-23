@@ -17,7 +17,7 @@ export default function FeaturesGrid() {
         <section className="py-24 bg-[#f8f9fa]">
             <div className="container mx-auto px-6 lg:px-8 max-w-[1200px]">
                 {/* About FinTrack text */}
-                <div className="max-w-4xl mb-16">
+                <div className="mb-16">
                     <Badge variant="outline" className="text-gray-700 bg-gray-50 border-gray-200 mb-6 px-3 py-1 font-medium rounded-full text-xs shadow-sm inline-flex">
                         <div className="w-4 h-4 rounded-full bg-blue-500 flex items-center justify-center mr-2">
                             <svg viewBox="0 0 24 24" fill="none" className="w-2.5 h-2.5 text-white" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
@@ -53,21 +53,21 @@ export default function FeaturesGrid() {
                     <Card className="lg:col-span-7 bg-[#f8f9fa] border-gray-100 shadow-sm overflow-hidden p-6 pb-0 relative min-h-[350px]">
                         <div className="flex justify-between items-start mb-4">
                             {/* Browser Window mockup styling */}
-                            <div className="w-full h-full absolute inset-0 pt-16 px-6">
+                            <div className="w-full h-full absolute inset-0 pt-16 pb-4 px-6">
                                 {/* Internal window */}
                                 <div className="w-full bg-[#f8fafc] rounded-t-xl border border-gray-200 shadow-lg h-full p-4 pb-6 flex gap-4">
                                     {/* Left Column */}
                                     <div className="flex flex-col gap-4 w-[45%]">
                                         {/* Chat Skeleton */}
-                                        <div className="bg-[#f3f9fe] border border-blue-50/50 rounded-xl p-5 flex flex-col justify-center gap-4 shadow-sm flex-1">
+                                        <div className="bg-[#f3f9fe] border border-blue-50/50 rounded-[20px] p-4 flex flex-col justify-center gap-2 shadow-sm">
                                             {/* Left Chat (Kabir) */}
                                             <div className="flex gap-2 items-end">
-                                                <div className="bg-white border border-gray-100 rounded-2xl rounded-bl-sm p-3 shadow-sm w-full relative pb-5">
+                                                <div className="bg-white border border-gray-100 rounded-2xl rounded-bl-sm p-3 shadow-sm w-full relative pb-4">
                                                     <div className="h-1.5 w-full bg-gray-200 rounded-full mb-2"></div>
                                                     <div className="h-1.5 w-[60%] bg-gray-200 rounded-full"></div>
 
                                                     {/* Name Tag overlapping border */}
-                                                    <div className="absolute -bottom-3 left-2 bg-[#00897b] text-white text-[9px] font-bold px-3 py-1 rounded-full shadow-md flex items-center justify-center border-2 border-white">
+                                                    <div className="absolute -bottom-3 left-2 bg-[#00897b] text-white text-[9px] font-bold px-3 py-0.5 rounded-full shadow-md flex items-center justify-center border-2 border-white">
                                                         Kabir
                                                     </div>
                                                 </div>
@@ -75,11 +75,11 @@ export default function FeaturesGrid() {
 
                                             {/* Right Chat (Sajibur) */}
                                             <div className="flex gap-2 items-end justify-end mt-2">
-                                                <div className="bg-white border border-blue-100 rounded-2xl rounded-br-sm p-3 shadow-sm w-[85%] relative pb-4">
+                                                <div className="bg-white border border-blue-100 rounded-2xl rounded-br-sm p-3 shadow-sm w-[85%] relative pb-3">
                                                     <div className="h-1.5 w-full bg-blue-500 rounded-full"></div>
 
                                                     {/* Name Tag overlapping border */}
-                                                    <div className="absolute -bottom-3 right-2 bg-[#3b82f6] text-white text-[9px] font-bold px-3 py-1 rounded-full shadow-md flex items-center justify-center border-2 border-white">
+                                                    <div className="absolute -bottom-3 right-2 bg-[#3b82f6] text-white text-[9px] font-bold px-3 py-0.5 rounded-full shadow-md flex items-center justify-center border-2 border-white">
                                                         Sajibur
                                                     </div>
                                                 </div>
@@ -87,7 +87,7 @@ export default function FeaturesGrid() {
                                         </div>
 
                                         {/* Analytics */}
-                                        <div className="bg-white border border-gray-100 rounded-lg p-4 shadow-sm flex-1 flex flex-col justify-center">
+                                        <div className="bg-white border border-gray-100 rounded-[20px] p-5 shadow-sm flex-1 flex flex-col justify-center">
                                             <div className="flex justify-between items-center mb-1">
                                                 <span className="text-[12px] font-medium text-gray-800">Analytics</span>
                                                 <div className="text-[10px] text-gray-500 flex items-center gap-1">All time <ChevronDown className="w-3 h-3" /></div>
@@ -106,7 +106,7 @@ export default function FeaturesGrid() {
                                     </div>
 
                                     {/* Right Column: Meet the minds */}
-                                    <div className="flex-1 relative bg-[#c8e2fb] rounded-[24px] overflow-hidden flex flex-col p-8 justify-between">
+                                    <div className="flex-1 relative bg-[#c8e2fb] rounded-[20px] overflow-hidden flex flex-col p-6 justify-between">
                                         <div className="flex items-center gap-2 mb-8 bg-[#eef5fd] w-fit px-3 py-1.5 rounded-[12px] shadow-sm">
                                             <div className="w-5 h-5 rounded-md bg-blue-600 flex items-center justify-center text-white shrink-0 shadow-inner">
                                                 <svg viewBox="0 0 24 24" fill="none" className="w-3.5 h-3.5 text-white" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
