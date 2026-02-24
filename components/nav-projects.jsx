@@ -26,14 +26,19 @@ export function NavProjects({
 
   return (
     <SidebarGroup className="group-data-[collapsible=icon]:hidden">
-      <SidebarGroupLabel>Projects</SidebarGroupLabel>
+      <SidebarGroupLabel className="text-[10px] font-bold text-gray-500 uppercase tracking-widest px-2 mb-1 border-b border-[#222] w-full pb-1 h-6">PROJECTS</SidebarGroupLabel>
       <SidebarMenu>
         {projects.map((item) => (
           <SidebarMenuItem key={item.name}>
-            <SidebarMenuButton asChild>
-              <a href={item.url}>
-                <item.icon />
-                <span>{item.name}</span>
+            <SidebarMenuButton
+              asChild
+              className="group-data-[state=expanded]:h-10 text-gray-400 hover:text-gray-200 hover:bg-[#1e1e1e] rounded-lg transition-all duration-200 flex items-center"
+            >
+              <a href={item.url} className="flex items-center w-full">
+                <item.icon className="size-[18px] shrink-0" />
+                <span className="ml-3 font-semibold group-data-[state=collapsed]:hidden whitespace-nowrap overflow-hidden flex-1">
+                  {item.name}
+                </span>
               </a>
             </SidebarMenuButton>
             <DropdownMenu>

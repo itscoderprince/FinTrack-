@@ -2,7 +2,7 @@ import { Send, ArrowDownToLine, MoreHorizontal, ArrowUpRight, ArrowDownRight } f
 
 export function AccountBalance() {
     return (
-        <div className="bg-[#1c1c1c] border border-[#2a2a2a] rounded-2xl p-5 flex flex-col h-full">
+        <div className="p-5 flex flex-col border-b border-[#2a2a2a]">
             {/* Header */}
             <div className="flex items-center justify-between mb-4">
                 <div className="flex items-center gap-2.5">

@@ -26,11 +26,13 @@ export default function AdminDashboard() {
             <div className="grid grid-cols-12 gap-4">
                 {/* Left Column */}
                 <div className="col-span-12 lg:col-span-4 xl:col-span-4 flex flex-col gap-4">
-                    {/* Account Balance */}
-                    <AccountBalance />
+                    <div className="bg-[#1c1c1c] border border-[#2a2a2a] rounded-2xl flex flex-col h-full">
+                        {/* Account Balance */}
+                        <AccountBalance />
 
-                    {/* My Wallet */}
-                    <WalletWidget />
+                        {/* My Wallet */}
+                        <WalletWidget />
+                    </div>
 
                     {/* My Savings Plan */}
                     <SavingsPlan />
@@ -57,7 +59,7 @@ export default function AdminDashboard() {
                     </div>
 
                     {/* Earnings Overview Chart */}
-                    <div className="flex-1 min-h-[280px]">
+                    <div className="flex-1 min-h-[380px]">
                         <EarningsChart />
                     </div>
 

@@ -55,9 +55,9 @@ export default function EarningsChart() {
                 </div>
             </div>
 
-            <div className="flex-1 min-h-[180px]">
+            <div className="flex-1 min-h-[300px]">
                 <ResponsiveContainer width="100%" height="100%">
-                    <BarChart data={data} barSize={14} margin={{ top: 8, right: 4, left: -20, bottom: 0 }}>
+                    <BarChart data={data} barSize={24} margin={{ top: 8, right: 4, left: -20, bottom: 0 }}>
                         <XAxis
                             dataKey="name"
                             axisLine={false}

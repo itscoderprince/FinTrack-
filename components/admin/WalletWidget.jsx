@@ -9,7 +9,7 @@ const wallets = [
 
 export default function WalletWidget() {
     return (
-        <div className="bg-[#1c1c1c] border border-[#2a2a2a] rounded-2xl p-5 flex flex-col h-full">
+        <div className="p-5 pt-2 flex flex-col h-full">
             <div className="flex items-center justify-between mb-4">
                 <span className="text-[13px] font-semibold text-gray-200">My Wallet</span>
                 <button className="flex items-center gap-1 text-[11px] font-medium text-gray-300 bg-[#252525] hover:bg-[#333] px-2.5 py-1.5 rounded-lg border border-[#333] transition-colors">
