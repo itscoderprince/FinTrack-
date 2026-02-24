@@ -21,7 +21,6 @@ import {
   SidebarContent,
   SidebarFooter,
   SidebarHeader,
-  SidebarRail,
   useSidebar
 } from "@/components/ui/sidebar"
 
@@ -114,7 +113,7 @@ export function AppSidebar({
           group-data-[state=expanded]:px-4 is removed strictly in collapsed mode
           to ensure perfect 32x32px (size-8) centering within the 48px rail.
         */}
-        <div className="flex items-center gap-3 h-[68px] justify-center group-data-[state=expanded]:px-4">
+        <div className="flex items-center gap-3 h-[60px] justify-center group-data-[state=expanded]:px-4">
           <div className="w-8 h-8 rounded-lg bg-[#3b82f6] flex items-center justify-center shrink-0">
             <Zap className="w-4 h-4 text-white fill-white" />
           </div>
@@ -135,7 +134,6 @@ export function AppSidebar({
       <SidebarFooter className="bg-[#141414] border-t border-[#222] p-2">
         <NavUser user={data.user} />
       </SidebarFooter>
-      <SidebarRail />
     </Sidebar>
   );
 }
